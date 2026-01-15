@@ -20,7 +20,7 @@ jobs:
       - name: Checkout source repo
         uses: actions/checkout@v4
         with:
-          repository: ${{ environment.SOURCE_REPO }}
+          repository: ${{ vars.SOURCE_REPO }}
           ref: main
           path: site
           # token: ${{ secrets.SOURCE_REPO_READ_TOKEN }}
