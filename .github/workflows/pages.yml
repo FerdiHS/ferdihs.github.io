@@ -31,6 +31,13 @@ jobs:
         with:
           node-version: 20
 
+      - name: Debug (prove package.json exists)
+        run: |
+          pwd
+          ls -la
+          ls -la site
+          test -f site/package.json && echo "OK: package.json found" || (echo "Missing package.json" && exit 1)
+
       - run: npm install
         working-directory: site
 
